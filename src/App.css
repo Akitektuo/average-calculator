@@ -1,0 +1,109 @@
+body {
+  min-width: 720px;
+  min-height: 512px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  background-color: #4285F4;
+  width: 512px;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+}
+
+.app div input.grades {
+  background-color: #FFFFFF;
+  border-radius: 32px;
+  border: none;
+  padding: 4px;
+  width: 480px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-size: 2em;
+}
+.app div.extra-functions {
+  display: flex;
+  margin: 16px 0;
+  width: 480px;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.app div.extra-functions div.semestrial-grade {
+  display: flex;
+  align-items: center;
+}
+
+.app div.extra-functions div.semestrial-grade div.semestrial {
+  margin-right: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.25em;
+  color: #FFFFFF;
+}
+
+.app div.extra-functions div.semestrial-grade input.semestrial {
+  background-color: #FFFFFF;
+  border-radius: 32px;
+  border: none;
+  padding: 4px;
+  width: 48px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-size: 2em;
+}
+
+.app div.extra-functions div.clear-button {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #FFFFFF;
+  cursor: pointer;
+  padding: 16px;
+}
+
+.app div.extra-functions div.clear-button:hover {
+  text-decoration: underline;
+}
+
+.app div.result {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5em;
+  padding: 16px;
+  color: #FFFFFF;
+}
+
+.ripple {
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.ripple:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform .5s, opacity 1s;
+}
+
+.ripple:active:after {
+  transform: scale(0, 0);
+  opacity: .3;
+  transition: 0s;
+}

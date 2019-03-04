@@ -48,6 +48,7 @@ class App extends Component {
       return;
     }
     input.value = this.cutLastChar(input.value);
+    this.computeAverage();
   }
 
   onSemestrialEdit = () => {
